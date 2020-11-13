@@ -13,6 +13,8 @@ namespace FrontEnd
 {
     public partial class MainForm : Form
     {
+        Logic logic = new Logic();
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,14 +22,12 @@ namespace FrontEnd
 
         private void Test1ButtonClick(object sender, EventArgs e)
         {
-            var empl = StaticDataStorage.Data.Employees.FirstOrDefault();
-            test1Button.Text = empl.Name;
+            test1Button.Text = logic.GetFirstEmployeeName();
         }
 
         private void Test2ButtonClick(object sender, EventArgs e)
         {
-            var empl = StaticDataStorage.Data.Employees.LastOrDefault();
-            test2Button.Text = empl.Name;
+            test2Button.Text = logic.GetLastEmployeeName();
         }
     }
 }
