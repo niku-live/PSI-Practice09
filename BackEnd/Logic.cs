@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace BackEnd
 {
-    public class Logic
+    public class Logic : ILogic
     {
         IDataStorage dataStorage;
 

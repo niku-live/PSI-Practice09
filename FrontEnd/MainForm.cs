@@ -13,11 +13,16 @@ namespace FrontEnd
 {
     public partial class MainForm : Form
     {
-        Logic logic = new Logic(new DefaultDataStorage());
+        ILogic logic;
 
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        public MainForm(ILogic logic): this()
+        {
+            this.logic = logic;
         }
 
         private void Test1ButtonClick(object sender, EventArgs e)
