@@ -20,13 +20,13 @@ namespace FrontEnd
 
         private void Test1ButtonClick(object sender, EventArgs e)
         {
-            var empl = StaticDataStorage.Employees.FirstOrDefault();
+            var empl = StaticDataStorage2.Employees.FirstOrDefault();
             test1Button.Text = empl.Name;
         }
 
         private void Test2ButtonClick(object sender, EventArgs e)
         {
-            var empl = StaticDataStorage.Employees.LastOrDefault();
+            var empl = StaticDataStorage2.Employees.LastOrDefault();
             test2Button.Text = empl.Name;
         }
     }
