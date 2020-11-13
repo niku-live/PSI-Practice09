@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BackEnd;
 
 namespace FrontEnd
 {
@@ -17,5 +18,16 @@ namespace FrontEnd
             InitializeComponent();
         }
 
+        private void Test1ButtonClick(object sender, EventArgs e)
+        {
+            var empl = StaticDataStorage.Employees.FirstOrDefault();
+            test1Button.Text = empl.Name;
+        }
+
+        private void Test2ButtonClick(object sender, EventArgs e)
+        {
+            var empl = StaticDataStorage.Employees.LastOrDefault();
+            test2Button.Text = empl.Name;
+        }
     }
 }
