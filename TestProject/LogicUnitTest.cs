@@ -9,7 +9,7 @@ namespace TestProject
         [TestMethod]
         public void TestGetFirstEmployeeName()
         {
-            var logic = new Logic();
+            var logic = new Logic(new FakeDataStorage());
             var expected = "Jonas";
             var actual = logic.GetFirstEmployeeName();
             Assert.AreEqual(expected, actual);
@@ -18,7 +18,7 @@ namespace TestProject
         [TestMethod]
         public void TestGetLastEmployeeName()
         {
-            var logic = new Logic();
+            var logic = new Logic(new FakeDataStorage());
             var expected = "Jonas";
             var actual = logic.GetLastEmployeeName();
             Assert.AreEqual(expected, actual);

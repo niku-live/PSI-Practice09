@@ -13,7 +13,7 @@ namespace FrontEnd
 {
     public partial class MainForm : Form
     {
-        Logic logic = new Logic();
+        Logic logic = new Logic(new DefaultDataStorage());
 
         public MainForm()
         {
